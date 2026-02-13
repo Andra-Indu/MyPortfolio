@@ -43,6 +43,15 @@ transition:1s;
 section.show{opacity:1;transform:translateY(0);}
 h2{text-align:center;color:#00e6e6;font-size:2.5rem;margin-bottom:40px;}
 
+/* Card style */
+.section-card{
+background:rgba(255,255,255,0.05);
+border-radius:25px;
+padding:40px;
+border:1px solid rgba(255,255,255,0.12);
+backdrop-filter:blur(10px);
+box-shadow:0 0 30px rgba(0,0,0,0.3);
+}
 /* ===== HERO SECTION PREMIUM STYLE ===== */
 
 .hero-new{
@@ -598,6 +607,118 @@ grid-template-columns:1fr;
 }
 }
 
+/* ===== PREMIUM FOOTER ===== */
+
+.footer {
+margin-top:80px;
+padding:50px 10%;
+background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+}
+
+.footer-container {
+background:rgba(255,255,255,0.05);
+border-radius:30px;
+padding:50px;
+border:1px solid rgba(0,230,230,0.3);
+backdrop-filter:blur(12px);
+display:grid;
+grid-template-columns:1.5fr 1fr 1fr;
+gap:40px;
+box-shadow:0 0 40px rgba(0,0,0,0.4);
+}
+
+/* LEFT SIDE */
+.footer-left h2{
+letter-spacing:2px;
+margin-bottom:10px;
+}
+
+.footer-left h4{
+color:#7dd3fc;
+margin-bottom:15px;
+}
+
+.footer-left p{
+opacity:.8;
+line-height:1.6;
+}
+
+/* QUICK LINKS */
+.footer-links h3,
+.footer-contact h3{
+margin-bottom:20px;
+color:#a5b4fc;
+letter-spacing:2px;
+}
+
+.footer-links ul{
+list-style:none;
+}
+
+.footer-links li{
+margin-bottom:10px;
+}
+
+.footer-links a{
+text-decoration:none;
+color:white;
+opacity:.8;
+transition:.3s;
+}
+
+.footer-links a:hover{
+color:#00e6e6;
+}
+
+/* CONTACT ICONS */
+.footer-contact a{
+display:flex;
+align-items:center;
+gap:15px;
+margin-bottom:15px;
+text-decoration:none;
+color:white;
+opacity:.9;
+transition:.3s;
+}
+
+.footer-contact i{
+width:40px;
+height:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:rgba(0,230,230,0.15);
+color:#00e6e6;
+box-shadow:0 0 15px rgba(0,230,230,0.5);
+transition:.3s;
+}
+
+.footer-contact a:hover i{
+transform:scale(1.1);
+box-shadow:0 0 25px rgba(0,230,230,0.8);
+}
+
+/* COPYRIGHT */
+.footer-bottom{
+text-align:center;
+margin-top:30px;
+opacity:.7;
+font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.footer-container{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.footer-contact a{
+justify-content:center;
+}
+}
 
 
 </style>
@@ -621,7 +742,7 @@ grid-template-columns:1fr;
 
 <!-- HERO -->
 <section id="home" class="hero-new show">
-
+<div class="section-card">
 <div class="hero-wrapper">
 
 <!-- LEFT CONTENT -->
@@ -681,13 +802,14 @@ Passionate about building scalable web applications using Java, Spring Boot, Rea
 </div>
 
 </div>
-
+</div>
 </div>
 </section>
 
 
 <!-- ABOUT -->
 <section id="about">
+<div class="section-card"> 
 <h2>About Me</h2>
 <div class="about-container">
 <div class="about-card"><h3>👩‍💻 Who I Am</h3><p>Computer Science graduate and Full Stack Developer passionate about modern applications.</p></div>
@@ -695,11 +817,13 @@ Passionate about building scalable web applications using Java, Spring Boot, Rea
 <div class="about-card"><h3>🧠 Strength</h3><p>Clean, secure and scalable code with performance focus.</p></div>
 <div class="about-card"><h3>🌱 Goal</h3><p>Grow as a professional software engineer solving real-world problems.</p></div>
 </div>
+</div>
 </section>
 
 
 <!-- EDUCATION -->
 <section id="education">
+<div class="section-card">
 <h2>Education</h2>
 
 <div class="education-container">
@@ -739,12 +863,13 @@ St.Joseph(EM) High School, India
 <span class="edu-score">CGPA: 9.5 / 10</span>
 </div>
 </div>
-
+</div>
 </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
+<div class="section-card">
 <h2>Skills</h2>
 
 <div class="skills-grid">
@@ -787,11 +912,13 @@ St.Joseph(EM) High School, India
 </div>
 </div>
 </div>
+</div>
 </section>
 
 <!-- ===== PROJECTS ADDED ===== -->
 <!-- PROJECTS -->
 <section id="projects">
+<div class="section-card">
 <h2>Projects</h2>
 
 <div class="project-grid">
@@ -837,13 +964,14 @@ GitHub
 </a>
 </div>
 </div>
-
+</div>
 </div>
 </section>
 
 <!-- ===== CERTIFICATIONS ADDED ===== -->
 <!-- CERTIFICATIONS -->
 <section id="certifications">
+<div class="section-card">
 <h2>Certifications</h2>
 
 <div class="cert-list">
@@ -878,7 +1006,7 @@ GitHub
 <h3>Php and MySql</h3>
 <p>Provided by spoken Tutorial</p>
 </a>
-
+</div>
 </div>
 </section>
 
@@ -890,8 +1018,8 @@ GitHub
 </div>
 
 <!-- CONTACT -->
-<!-- CONTACT -->
 <section id="contact">
+<div class="section-card">
 <h2>Contact Me</h2>
 
 <div class="contact-container">
@@ -931,13 +1059,67 @@ GitHub
 <textarea rows="4" placeholder="Your Message"></textarea>
 <button class="btn">Send Message</button>
 </div>
-
+</div>
 </div>
 </section>
 
-<footer>
-<p>© 2026 Indu Andra | All Rights Reserved</p>
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- LEFT -->
+<div class="footer-left">
+<h2>INDU ANDRA</h2>
+<h4>FULL STACK DEVELOPER</h4>
+<p>
+Building fast, scalable web applications using modern 
+Java, Spring Boot and React technologies. 
+Open to opportunities and collaborations.
+</p>
+</div>
+
+<!-- QUICK LINKS -->
+<div class="footer-links">
+<h3>QUICK LINKS</h3>
+<ul>
+<li><a href="#home">• Home</a></li>
+<li><a href="#about">• About</a></li>
+<li><a href="#skills">• Skills</a></li>
+<li><a href="#projects">• Projects</a></li>
+<li><a href="#certifications">• Certificates</a></li>
+<li><a href="#contact">• Contact</a></li>
+</ul>
+</div>
+
+<!-- CONTACT -->
+<div class="footer-contact">
+<h3>CONTACT ME</h3>
+
+<a href="mailto:andraindu68@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+Email
+</a>
+
+<a href="https://www.linkedin.com/in/indu-andra-730660300/" target="_blank">
+<i class="fa-brands fa-linkedin"></i>
+LinkedIn
+</a>
+
+<a href="https://github.com/Andra-Indu" target="_blank">
+<i class="fa-brands fa-github"></i>
+GitHub
+</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Indu Andra — All rights reserved.
+</div>
+
 </footer>
+
 
 <script>
 const sections=document.querySelectorAll("section");
